@@ -7,6 +7,38 @@ use Illuminate\Http\Request;
 
 class TripController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('check_token:api');
+    }
+
+
+public function creatproduct(Request $request)
+   {
+       $validate=Validator::make($request->all(),
+       [
+         
+
+
+         'name'=>'required|min:2',
+         'age'=>'required',
+         'type'=>'required',
+         'price'=>'required|numeric',
+         'start_date'=>'required|date',
+         'expiry_date'=>'required|date',
+         'start_trip'=>'required|date',
+         'end_trip'=>'required|date',
+         'rest'=>'required|integer',
+         'total'=>'required|integer',
+         'image'=>'required',
+         'reiteration'=>'required|integer',
+         'coutinent'=>'required',
+         'name_team'=>'required',  
+         'about'=>'required'
+       ]);
+
+
+    }
     /**
      * Display a listing of the resource.
      *

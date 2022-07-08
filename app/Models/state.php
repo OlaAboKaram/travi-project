@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class state extends Model
 {
     use HasFactory;
+
+    public function state_trip()
+    {
+      return $this->hasMany(state_trip::class);
+    }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('places', function (Blueprint $table) {
             $table->increments('id');
          //   $table->foreignId(column:'منطقة-id')->constrained()->cascadeOnDelete(); 
+         $table->integer('area-id')->unsigned();
             $table->string('name');
 
             $table->string('image')->nullable();

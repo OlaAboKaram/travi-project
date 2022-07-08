@@ -15,11 +15,13 @@ return new class extends Migration
     {
         Schema::create('trips', function (Blueprint $table) {
             $table->increments('id');
+            /*
             $table->integer('state-id')->unsigned();
         $table->integer('governorate-id')->unsigned();
-          $table->integer('type-id')->unsigned();
-          
+         $table->integer('area-id')->unsigned();
+         $table->integer('user-id')->unsigned();
           $table->integer('daily_program-id')->unsigned();
+          */
         //    $table->unsignedBigInteger(column:'state-id');
         //  $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
           //  $table->foreignId(column:'state-id')->constrained()->cascadeOnDelete();   
