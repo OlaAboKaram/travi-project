@@ -6,7 +6,7 @@ use App\Models\trip;
 use Illuminate\Http\Request;
 
 class TripController extends Controller
-{
+{/*
     public function __construct()
     {
         $this->middleware('check_token:api');
@@ -15,7 +15,7 @@ class TripController extends Controller
 
 public function creatproduct(Request $request)
    {
-       $validate=Validator::make($request->all(),
+$validate=Validator::make($request->all(),
        [
          
 
@@ -36,9 +36,10 @@ public function creatproduct(Request $request)
          'name_team'=>'required',  
          'about'=>'required'
        ]);
+k
 
-
-    }
+    }*/
+    sdklkfl
     /**
      * Display a listing of the resource.
      *
