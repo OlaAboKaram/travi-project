@@ -5,10 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class addition extends Model
+class area extends Model
 {
     use HasFactory;
+
     protected $fillable = [
-        'about',
-    ];
+        'name',
+        'image1',
+        'image2',
+        'image3'
+];
+    public function area_trip()
+{
+  return $this->hasMany(area_trip::class);
+}
 }

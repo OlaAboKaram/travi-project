@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('date_days', function (Blueprint $table) {
             $table->id();
-            $table->date('day');
+            $table->dateTime('day');
+            
             $table->timestamps();
         });
     }

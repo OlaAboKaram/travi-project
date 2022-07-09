@@ -21,8 +21,9 @@ class trip extends Model
         'total',
         'image',
         'reiteration',
-        'provinces',
         'coutinent',
+        'name_team',  
+        'about',
     ];
 
 public function user()
@@ -30,8 +31,30 @@ public function user()
   return $this->belongsTo(User::class);
   
 }
-
-
+// public function governorate()
+// {
+//   return $this->belongsTo( governorate::class);
+// }
+public function daily_program()
+{
+  return $this->hasOne(daily_program::class);
+}
+public function governorate()
+{
+  return $this->hasMany(governorate_trip::class);
+}
+public function state()
+{
+  return $this->hasMany(state_trip::class);
+}
+public function area()
+{
+  return $this->hasMany(area_trip::class);
+}
+public function activity()
+{
+  return $this->hasMany(activity_trip::class);
+}
 
 
 }

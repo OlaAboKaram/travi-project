@@ -16,4 +16,12 @@ class daily_program extends Model
     'place_id',
     'food_id'
 ];
+
+
+
+
+
+
+
+
 }

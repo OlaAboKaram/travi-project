@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('places', function (Blueprint $table) {
+        Schema::create('activities', function (Blueprint $table) {
             $table->increments('id');
-         //   $table->foreignId(column:'منطقة-id')->constrained()->cascadeOnDelete(); 
-         $table->integer('area-id')->unsigned();
             $table->string('name');
-
-            $table->string('image')->nullable();
-            //هذا مربوط بالمناطق
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('places');
+        Schema::dropIfExists('activities');
     }
 };

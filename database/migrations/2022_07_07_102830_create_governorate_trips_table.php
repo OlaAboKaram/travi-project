@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('governorate_trips', function (Blueprint $table) {
             $table->increments('id');
-            
+            $table->integer('governorate-id')->unsigned();
+            $table->integer('trip-id')->unsigned();
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('governorate_trips');
     }
 };
